@@ -10,7 +10,7 @@ namespace EarthKingdomCharacterCreationApp
         _6,
         _7,
         _8,
-        _9
+        _9,
         _10,
         _11,
         _12,
@@ -29,7 +29,7 @@ namespace EarthKingdomCharacterCreationApp
         _6,
         _7,
         _8,
-        _9
+        _9,
         _10,
         _11,
         _12,
@@ -48,7 +48,7 @@ namespace EarthKingdomCharacterCreationApp
         _6,
         _7,
         _8,
-        _9
+        _9,
         _10,
         _11,
         _12,
@@ -67,7 +67,7 @@ namespace EarthKingdomCharacterCreationApp
         _6,
         _7,
         _8,
-        _9
+        _9,
         _10,
         _11,
         _12,
@@ -86,7 +86,7 @@ namespace EarthKingdomCharacterCreationApp
         _6,
         _7,
         _8,
-        _9
+        _9,
         _10,
         _11,
         _12,
@@ -105,7 +105,7 @@ namespace EarthKingdomCharacterCreationApp
         _6,
         _7,
         _8,
-        _9
+        _9,
         _10,
         _11,
         _12,
@@ -118,3 +118,4 @@ namespace EarthKingdomCharacterCreationApp
         _19,
         _20,
     }
+}

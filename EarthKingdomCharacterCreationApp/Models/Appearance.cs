@@ -7,6 +7,13 @@ namespace EarthKingdomCharacterCreationApp
 {
     public class Appearance
     {
+        public Height CharacterHeight { get; set; }
+        public Build CharacterBuild { get; set; }
+        public HairStyle CharacterHairStyle { get; set; }
+        public HairColor CharacterHairColor { get; set; }
+        public EyeColor CharacterEyeColor { get; set; }
+
+        public SkinColor CharacterSkinColor { get; set; }
 
         public string SpecialCharacteristics { get; set; }
 

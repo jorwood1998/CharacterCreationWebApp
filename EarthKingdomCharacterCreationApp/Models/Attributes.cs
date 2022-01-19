@@ -7,6 +7,7 @@ namespace EarthKingdomCharacterCreationApp
 {
     public class Attributes
     {
+
         public Strength _strength { get; set; }
         public Dexterity _dexterity { get; set; }
         public Constitution _constitution { get; set; }

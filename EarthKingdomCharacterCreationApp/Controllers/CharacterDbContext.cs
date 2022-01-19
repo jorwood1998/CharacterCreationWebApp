@@ -13,7 +13,7 @@ namespace EarthKingdomCharacterCreationApp.Controllers
 
         public DbSet<Character> Characters { get; set; }
         public DbSet<Appearance> Appearance { get; set; }
-        public DbSet<ChAttribute> Attribute {get; set;}
+        public DbSet<Attribute> Attribute {get; set;}
 
     }
 }

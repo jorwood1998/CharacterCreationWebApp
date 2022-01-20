@@ -126,7 +126,6 @@ namespace EarthKingdomCharacterCreationApp.Controllers
             return Ok($"{foundCharacter} added to {foundTeam}");
 
         }
-
         //REMOVE
         [HttpDelete]
         public async Task<IHttpActionResult> DeleteTeam([FromUri] int id)
@@ -140,6 +139,29 @@ namespace EarthKingdomCharacterCreationApp.Controllers
             await _character.SaveChangesAsync();
             return Ok();
         }
+        [HttpPut]
+        public async Task<IHttpActionResult> RemoveCharacterFromTeam([FromUri] int id, [FromBody] Team teamId)
+        {
+            CharacterClass foundCharacter = await _character.CharacterClass.FindAsync(id);
+            if (foundCharacter == null)
+            {
+                return NotFound();
+            }
+
+
+            Team foundTeam = await _team.Team.FindAsync(teamId);
+
+            if (foundTeam == null)
+            {
+                return NotFound();
+            }
+
+            foundTeam.TeamMembers.Remove(foundCharacter);
+
+            return Ok($"{foundCharacter} removed from {foundTeam}");
+
+        }
+
 
     }
 }

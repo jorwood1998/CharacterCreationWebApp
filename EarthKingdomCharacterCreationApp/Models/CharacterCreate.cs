@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,6 +11,8 @@ namespace EarthKingdomCharacterCreationApp.Models
     {
         [Key]
         public int Id { get; set; }
+        [ForeignKey(nameof(Team))]
+        public int TeamId { get; set; }
 
         [Required]
         public string Strength { get; set; }

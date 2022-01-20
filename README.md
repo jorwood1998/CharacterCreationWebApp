@@ -25,7 +25,8 @@ export their character for outside uses.
 
 During the creation of this app, we collaborated and tracked our progress using the following:
 
-- [Trello](https://trello.com/b/DFMT9bjp/agile-project) ** Update as needed
+- [Trello](https://trello.com/invite/b/DFMT9bjp/07ef7fb0efd3c06e43024c1e856ac5ca/agile-project
+) ** Update as needed
 - [GitHub](https://github.com/jorwood1998/CharacterCreationWebApp) ** Update as needed
 
 

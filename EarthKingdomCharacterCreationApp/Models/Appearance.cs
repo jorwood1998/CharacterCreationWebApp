@@ -7,30 +7,26 @@ namespace EarthKingdomCharacterCreationApp
 {
     public class Appearance
     {
-        public int Height { get; set; }
-        public string Build { get; set; }
-        public string HairStyle { get; set; }
-        public string HairColor { get; set; }
-        public string EyeColor { get; set; }
-        public string SkinColor { get; set; }
+        public Height CharacterHeight { get; set; }
+        public Build CharacterBuild { get; set; }
+        public HairStyle CharacterHairStyle { get; set; }
+        public HairColor CharacterHairColor { get; set; }
+        public EyeColor CharacterEyeColor { get; set; }
+
+        public SkinColor CharacterSkinColor { get; set; }
+
         public string SpecialCharacteristics { get; set; }
 
         public Appearance(int height, string build, string hairStyle, string hairColor, string eyeColor, string skinColor, string specialCharacteristics)
         {
-            height = Height;
-            build = Build;
-            hairStyle = HairStyle;
-            hairColor = HairColor;
-            eyeColor = EyeColor;
-            skinColor = SkinColor;
-            specialCharacteristics = SpecialCharacteristics;     
+                 
         }
         public enum Height { _60,_61 , _62, _63, _64, _65, _66, _67, _68, _69, _70, _71, _72, _73, _74, _75, _76, _77, _78 }
         public enum Build { Skinny, Strong, Athletic, Normal, Heavy, Overweight, Obese}
-        public enum HairStyle { Afro,Afropuffs,Asymmetric cut,Bald,Bangs,Beehive,Bighair,Blowout,Bob cut,Bouffant,Bowlcut,Braid,Brush cut,Bun, Bunches,Burr,Businessman cut,Butch cut,Buzz cut,Caesar cut,Chignon,Chonmage,Chupryna,Combover,Conk,Cornrows,Crewcut,Crochetbraids,Croydonfacelift,Curlyhair,Curtained hair,Devilock,Didoflip, Digital, perm, Dreadlocks, Ducksass,Etoncrop, Extensions, Feathered hair , Fingerwave , Flattop,Fontange, Frenchbraid, Frenchtwist, Fringe, Frostedtips, Haircrimping, Harvardclip, High, Hi-topfade, Inductioncut, Ivy, League,Jewfro, Jhericurl,Kisscurl,Layered hair,Liberty spikes, Longhair ,Lobcut ,Marcelling, Mod cut, Mohawk, Mullet, Pageboy,Part,Payot,Pigtail,Pixie cut,Polish half shaven head,Pompadour,Ponytail,Punch perm,Princeton,Professional cut,Queue,Quiff,Rattail,Razor cut,Regular haircut, Ringlets, ShagShape-Up, Shimada, Short back and sides, Short brush cut, Short hair, Spiky hair, Straight hair, Standard haircut, Surfer hair, Taper cut,Temple, Fade,Tonsure, UpdoUndercut, Victory rolls, WavesWidows peak, Wings}
-        public enum HairColor {Auburn, Red, Blond, Gray, White, Black, Brown, Stawberry Blond, Dirty Blond, Copper, Platinum Blond, Chestnut Brown  }
+        public enum HairStyle { Afro,Afropuffs,Asymmetric_cut, Bald, Bangs, Beehive, Bighair, Blowout, Bob_cut,Bouffant,Bowlcut,Braid,Brush_cut,Bun, Bunches,Burr,Businessman_cut,Butch_cut,Buzz_cut,Caesar_cut, Chignon, Chonmage, Chupryna, Combover, Conk, Cornrows, Crewcut,Crochetbraids,Croydonfacelift,Curlyhair,Curtained_hair,Devilock,Didoflip, Digital, perm, Dreadlocks, Ducksass,Etoncrop, Extensions, Feathered_hair , Fingerwave , Flattop,Fontange, Frenchbraid, Frenchtwist, Fringe, Frostedtips, Haircrimping, Harvardclip, High, Hi_topfade, Inductioncut, Ivy, League,Jewfro, Jhericurl,Kisscurl,Layered_hair,Liberty_spikes, Longhair ,Lobcut ,Marcelling, Mod_cut, Mohawk, Mullet, Pageboy, Part, Payot,Pigtail,Pixie_cut,Polish_half_shaven_head,Pompadour,Ponytail,Punch_perm,Princeton,Professional_cut,Queue,Quiff,Rattail,Razor_cut,Regular_haircut, Ringlets, ShagShape_Up, Shimada, Short_back_and_sides, Short_brush_cut, Short_hair, Spiky_hair, Straight_hair, Standard_haircut, Surfer_hair, Taper_cut,Temple, Fade,Tonsure, UpdoUndercut, Victory_rolls, WavesWidows_peak, Wings}
+        public enum HairColor {Auburn, Red, Blond, Gray, White, Black, Brown, Stawberry_Blond, Dirty_Blond, Copper, Platinum_Blond, Chestnut_Brown  }
         public enum EyeColor { Amber, Blue, Brown, Gray, Green, Hazel, Violet, Black}
-        public enum SkinColor { White, Pale, Fair, Light Brown, Brown, Dark Brown}
+        public enum SkinColor { White, Pale, Fair, Light_Brown, Brown, Dark_Brown}
 
     }
 }

@@ -264,13 +264,14 @@ namespace EarthKingdomCharacterCreationApp
         Reaper,
         Dragon
     }
-    public class CharacterClass
+    public class Names
     {
-        public CharacterClass()
-        {
-
-        }
-        public CharacterClass(string firstName, string lastName, string alias, string fullName)
+        public string _FirstName { get; set; }
+        public string _LastName { get; set; }
+        public string _Alias { get; set; }
+        public string _FullName
+        { get {return $"{_FirstName} 'The {_Alias}' {_LastName}"; } }
+        public Names(string firstName, string lastName, string alias, string fullName)
         {
             firstName = _FirstName;
             lastName = _LastName;

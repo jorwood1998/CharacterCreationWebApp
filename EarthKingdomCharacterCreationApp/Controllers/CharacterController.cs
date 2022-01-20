@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EarthKingdomCharacterCreationApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace EarthKingdomCharacterCreationApp.Controllers
         // POST (create)
         // api/Character
         [HttpPost]
-        public async Task<IHttpActionResult> CreateCharacter([FromBody] Character character) 
+        public async Task<IHttpActionResult> CreateCharacter([FromBody] CharacterCreate character) 
         {
             if (character is null)
             {
@@ -42,7 +43,7 @@ namespace EarthKingdomCharacterCreationApp.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> GetCharacters()
         {
-            List<Character> characters = await _character.Characters.ToListAsync();
+            List<CharacterCreate> characters = await _character.Characters.ToListAsync();
             return Ok(characters);
         }
 
@@ -51,7 +52,7 @@ namespace EarthKingdomCharacterCreationApp.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> GetCharacterByName([FromUri]string name)
         {
-            Character character = await _character.Characters.FindAsync(name);
+            CharacterCreate character = await _character.Characters.FindAsync(name);
 
             if(character != null)
             {

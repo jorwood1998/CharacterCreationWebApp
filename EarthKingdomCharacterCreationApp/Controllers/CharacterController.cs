@@ -60,6 +60,19 @@ namespace EarthKingdomCharacterCreationApp.Controllers
 
             return NotFound();
         }
+        //Get by attribute
+        [HttpGet]
+        public async Task<IHttpActionResult> GetCharacterByAttribute([FromUri]string attribute)
+        {
+            Character character = await _character.Characters.FindAsync(attribute);
+            if (character != null)
+            {
+                return Ok(character);
+            }
 
+            return NotFound();
+        }
     }
+
 }
+

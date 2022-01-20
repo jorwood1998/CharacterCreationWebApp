@@ -266,16 +266,17 @@ namespace EarthKingdomCharacterCreationApp
     }
     public class CharacterClass
     {
-        public CharacterClass()
-        {
-
-        }
+        public string _FirstName { get; set; }
+        public string _LastName { get; set; }
+        public string _Alias { get; set; }
+        public string _FullName
+        { get { return $"{_FirstName} 'The {_Alias}' {_LastName}"; } }
         public CharacterClass(string firstName, string lastName, string alias, string fullName)
         {
             firstName = _FirstName;
             lastName = _LastName;
             alias = _Alias;
-            fullName = $"{_FirstName} '{_Alias}' {_LastName}";
+            fullName = _FullName;
         }
     }
 }

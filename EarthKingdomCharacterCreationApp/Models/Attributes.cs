@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,7 +8,8 @@ namespace EarthKingdomCharacterCreationApp
 {
     public class Attributes
     {
-
+        [Key]
+        public int AttributeId { get; set; }
         public Strength _strength { get; set; }
         public Dexterity _dexterity { get; set; }
         public Constitution _constitution { get; set; }
@@ -15,6 +17,7 @@ namespace EarthKingdomCharacterCreationApp
         public Wisdom _wisdom { get; set; }
         public Charisma _charisma { get; set; }
 
+        public Attributes () {  }
         public Attributes(Strength strength, Dexterity dexterity, Constitution constitution, Intelligence intelligence, Wisdom wisdom, Charisma charisma)
         {
             _strength = strength;

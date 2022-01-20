@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,6 +11,7 @@ namespace EarthKingdomCharacterCreationApp.Models
     {
         [Key]
         public int Id { get; set; }
+
 
         [Required]
         public string Strength { get; set; }
@@ -25,7 +27,7 @@ namespace EarthKingdomCharacterCreationApp.Models
 
         [Required]
         public string Wisdom { get; set; }
-        
+
         [Required]
         public string Charisma { get; set; }
 
@@ -55,7 +57,9 @@ namespace EarthKingdomCharacterCreationApp.Models
         [Required]
         public string SkinColor { get; set; }
 
-        [Required]
+        
         public string SpecialItems { get; set; }
+        public virtual Team Team { get; set; }
+        public virtual Attributes Attributes { get; set; }
     }
 }

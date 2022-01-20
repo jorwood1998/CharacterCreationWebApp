@@ -25,7 +25,7 @@ namespace EarthKingdomCharacterCreationApp.Models
 
         [Required]
         public string Wisdom { get; set; }
-        
+
         [Required]
         public string Charisma { get; set; }
 

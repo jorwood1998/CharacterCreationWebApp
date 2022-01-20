@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace EarthKingdomCharacterCreationApp.Controllers
+namespace EarthKingdomCharacterCreationApp.Models
 {
     public class CharacterDbContext : DbContext
     {
         public CharacterDbContext()
             : base("DefaultConnection") { }
 
-        public DbSet<Character> Characters { get; set; }
+        public DbSet<CharacterCreate> CharacterCreate { get; set; }
         public DbSet<Appearance> Appearance { get; set; }
         public DbSet<Attribute> Attribute {get; set;}
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -266,11 +267,14 @@ namespace EarthKingdomCharacterCreationApp
     }
     public class CharacterClass
     {
+        [Key]
+        public int CharacterId { get; set; }
         public string _FirstName { get; set; }
         public string _LastName { get; set; }
         public string _Alias { get; set; }
         public string _FullName
         { get { return $"{_FirstName} 'The {_Alias}' {_LastName}"; } }
+        public CharacterClass() { }
         public CharacterClass(string firstName, string lastName, string alias, string fullName)
         {
             firstName = _FirstName;

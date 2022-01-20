@@ -140,6 +140,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Migrations\202201202028354_Initial.cs" />
+    <Compile Include="Migrations\202201202028354_Initial.designer.cs">
+      <DependentUpon>202201202028354_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201202041070_2nd.cs" />
+    <Compile Include="Migrations\202201202041070_2nd.designer.cs">
+      <DependentUpon>202201202041070_2nd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201202104251_3rd.cs" />
+    <Compile Include="Migrations\202201202104251_3rd.designer.cs">
+      <DependentUpon>202201202104251_3rd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201202126323_4th.cs" />
+    <Compile Include="Migrations\202201202126323_4th.designer.cs">
+      <DependentUpon>202201202126323_4th.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201202148419_5th.cs" />
+    <Compile Include="Migrations\202201202148419_5th.designer.cs">
+      <DependentUpon>202201202148419_5th.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Appearance.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -185,7 +206,6 @@
     <Compile Include="Models\CharacterCreate.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -269,6 +289,23 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202201202028354_Initial.resx">
+      <DependentUpon>202201202028354_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201202041070_2nd.resx">
+      <DependentUpon>202201202041070_2nd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201202104251_3rd.resx">
+      <DependentUpon>202201202104251_3rd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201202126323_4th.resx">
+      <DependentUpon>202201202126323_4th.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201202148419_5th.resx">
+      <DependentUpon>202201202148419_5th.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

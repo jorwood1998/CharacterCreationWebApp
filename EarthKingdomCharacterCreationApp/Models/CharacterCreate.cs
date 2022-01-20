@@ -11,8 +11,7 @@ namespace EarthKingdomCharacterCreationApp.Models
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey(nameof(Team))]
-        public int TeamId { get; set; }
+
 
         [Required]
         public string Strength { get; set; }
@@ -58,7 +57,9 @@ namespace EarthKingdomCharacterCreationApp.Models
         [Required]
         public string SkinColor { get; set; }
 
-        [Required]
+        
         public string SpecialItems { get; set; }
+        public virtual Team Team { get; set; }
+        public virtual Attributes Attributes { get; set; }
     }
 }

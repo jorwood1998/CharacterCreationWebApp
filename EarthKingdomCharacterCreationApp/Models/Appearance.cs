@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,6 +8,8 @@ namespace EarthKingdomCharacterCreationApp
 {
     public class Appearance
     {
+        [Key]
+        public int AppearanceId { get; set; } 
         public Height CharacterHeight { get; set; }
         public Build CharacterBuild { get; set; }
         public HairStyle CharacterHairStyle { get; set; }

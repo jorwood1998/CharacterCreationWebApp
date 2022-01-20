@@ -10,10 +10,15 @@ namespace EarthKingdomCharacterCreationApp.Models
     {
         public CharacterDbContext()
             : base("DefaultConnection") { }
-        public DbSet<CharacterClass> CharacterClass { get; set; }
         public DbSet<CharacterCreate> CharacterCreate { get; set; }
         public DbSet<Appearance> Appearance { get; set; }
-        public DbSet<Attribute> Attribute {get; set;}
+        public DbSet<Attributes> Attributes { get; set; }
+        public static CharacterDbContext Create()
+        {
+            return new CharacterDbContext();
+        }
+
+        public DbSet<Team> Team { get; set; }
 
     }
 }

@@ -12,8 +12,8 @@ namespace EarthKingdomCharacterCreationApp.Controllers
 {
     public class TeamController : ApiController
     {
-        private readonly TeamDBContext _team = new TeamDBContext();
-        public CharacterDbContext _character = new CharacterDbContext();
+       
+        public CharacterDbContext _team = new CharacterDbContext();
 
         //CREATE
         [HttpPost]
@@ -57,30 +57,22 @@ namespace EarthKingdomCharacterCreationApp.Controllers
         }
         //Search By Team ID
         [HttpGet]
-        public async Task<IHttpActionResult> GetTeamById([FromUri] string teamId)
+        public async Task<IHttpActionResult> GetTeamById([FromUri] int teamId)
         {
-            Team character = await _team.Team.FindAsync(teamId);
+            Team team = await 
+                _team.Team.FindAsync(teamId);
 
-            if (character != null)
+            if (team != null)
             {
-                return Ok(character);
+                return Ok(team);
             }
 
             return NotFound();
         }
         //UPDATE
         //add character to team
-        [HttpGet]
-        public async Task<IHttpActionResult> GetCharacterById([FromUri]int id)
-        {
-            CharacterCreate character = await _character.CharacterCreate.FindAsync(id);
-            if (character != null)
-            {
-                return Ok(character);
-            }
 
-            return NotFound();
-        }
+
         [HttpPut]
         public async Task<IHttpActionResult> UpdateTeam([FromUri] int TeamId, [FromBody] Team updatedTeam)
         {
@@ -99,26 +91,26 @@ namespace EarthKingdomCharacterCreationApp.Controllers
             team.TeamName = updatedTeam.TeamName;
 
 
-            await _character.SaveChangesAsync();
+            await _team.SaveChangesAsync();
 
             return Ok("The team has been updated");
 
         }
-        [HttpPut]
-        public async Task<IHttpActionResult> AddCharacterToTeam([FromUri] int id, [FromBody] Team teamId)
+        [HttpPost]
+        public async Task<IHttpActionResult> AddCharacterToTeam([FromUri] int id, [FromBody] int teamId)
         {
-            CharacterClass foundCharacter = await _character.CharacterClass.FindAsync(id);
+            CharacterCreate foundCharacter = await _team.CharacterCreate.FindAsync(id);
             if (foundCharacter == null)
             {
-                return NotFound();
+                return BadRequest("No Character Found ");
             }
-            
 
             Team foundTeam = await _team.Team.FindAsync(teamId);
 
+
             if (foundTeam == null)
             {
-                return NotFound();
+                return BadRequest("No Team Found");
             }
 
             foundTeam.TeamMembers.Add(foundCharacter);
@@ -136,13 +128,13 @@ namespace EarthKingdomCharacterCreationApp.Controllers
 
             _team.Team.Remove(team);
 
-            await _character.SaveChangesAsync();
+            await _team.SaveChangesAsync();
             return Ok();
         }
-        [HttpPut]
+        [HttpDelete]
         public async Task<IHttpActionResult> RemoveCharacterFromTeam([FromUri] int id, [FromBody] Team teamId)
         {
-            CharacterClass foundCharacter = await _character.CharacterClass.FindAsync(id);
+            CharacterCreate foundCharacter = await _team.CharacterCreate.FindAsync(id);
             if (foundCharacter == null)
             {
                 return NotFound();

@@ -1,4 +1,4 @@
-﻿using EarthKingdomCharacterCreationApp.Models;
+using EarthKingdomCharacterCreationApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -61,6 +61,15 @@ namespace EarthKingdomCharacterCreationApp.Controllers
 
             return NotFound();
         }
+        //Get by attribute
+        [HttpGet]
+        public async Task<IHttpActionResult> GetCharacterByAttribute([FromUri]string attribute)
+        {
+            Character character = await _character.Characters.FindAsync(attribute);
+            if (character != null)
+            {
+                return Ok(character);
+            }
 
         // GET BY ID
         // api/Character/{id}
@@ -142,6 +151,7 @@ namespace EarthKingdomCharacterCreationApp.Controllers
 
             return InternalServerError();
         }
-
     }
+
 }
+

@@ -13,12 +13,12 @@ namespace EarthKingdomCharacterCreationApp.Models
         public int TeamId { get; set; }
         [Required]
         public string TeamName { get; set; }    
-        public List<Character> TeamMembers { get; set;} = new List<Character>();
+        public List<CharacterClass> TeamMembers { get; set;} = new List<CharacterClass>();
         public Team() { }
-        public Team (string teamName, List<Character> characterList)
+        public Team (string teamName, List<CharacterClass> characterList)
         {
             TeamName = teamName;
-            TeamMembers = new List<Character>();
+            TeamMembers = new List<CharacterClass>();
             TeamMembers = characterList;
         }
 
